@@ -1,0 +1,16 @@
+*{
+    background-color: white;
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 150px;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+
+}
