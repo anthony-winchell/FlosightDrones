@@ -1,16 +1,143 @@
+body hr{
+    margin: 30px 0 30px 0;
+}
+
 *{
-    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(55, 55, 55);
+    color: rgba(225, 234, 242, 0.864);
+}
+
+/*header shit*/ 
+
+header h1{
+    background-color: rgb(113, 156, 109);
+    width: 98%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 10px 0;
+    max-width: 1500px;
+    border-radius: 10px 10px 0 0;
 }
 
 header{
+    width: 100%;
     display: flex;
-    justify-content: left;
     align-items: center;
-    height: 150px;
+    justify-content: center;
+    flex-direction: column;
+}
+nav{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(113, 156, 109);
+    border-radius: 0 0 10px 10px;
+    max-width: 1500px;
+}
+nav a{
+    background-color: rgb(113, 156, 109);
+}
+nav a:hover{
+    color: rgb(154, 117, 154);
+}
+nav a:active{
+    color: rgb(88, 88, 243)
 }
 
-img{
-    height: 150px;
-    width: 150px;
+
+header img{
+    width: 98%;
+    flex-shrink: 1fr;
+    max-height: 275px;
+    max-width: 1500px;
+}
+
+/*home section*/
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+.home h2{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+section h1{
+    width: 50%;
+    text-align: center;
+    margin-top: 0;
+    background-color: rgb(113, 156, 109);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#photo-container-container{
+    max-width: 100%;
+    height: auto;
+    
+}
+
+#photo-container{
+    width: 100%;
+    display: flex;
+    margin: 10px auto 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#photo-container img{
+    height: 400px;
+    width: 500px;
+    margin: 0 20px;
+}
+
+/* about section */
+
+.about img{
+    height: 25%;
+    width: 25%;
+    margin: 20px auto 0 auto;
+}
+.about p {
+    margin: 20px;
+}
+
+
+/*contact*/ 
+.contact h3{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0;
 
 }
+
+#contact-box{
+    width: 75%;
+    height: 100px;
+    background-color: rgba(239, 239, 239, 0.789);
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center ;
+}
+#contact-box p, a{
+    background-color: transparent;
+}
+#contact-box p{
+    color: black;
+}
+#contact-box a{
+    color: blue;
+}
+#contact-box a:hover{
+    color:  rgb(92, 61, 92);
+}
+#contact-box a:active{
+    color: rgb(196, 32, 32);
+}
+
