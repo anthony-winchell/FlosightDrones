@@ -50,6 +50,12 @@
     margin: 0 auto;
     padding: var(--padding);
   }
+
+  section h2{
+    text-align: center;
+  }
+
+
   .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 ratio */
@@ -128,7 +134,24 @@ header h1{
     font-weight: bold;
     margin-top: 1rem;
   }
+  .services-list h3{
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
   
+  .services-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.services-section {
+  flex: 1;
+  min-width: 300px;
+}
+
   
   .material-symbols-outlined {
     margin-right: 0.5rem;
@@ -153,6 +176,30 @@ header h1{
     gap: 1rem;
     justify-content: center;
     margin: 1rem 0;
+  }
+  .gallery h2 span{
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, 
+      var(--accent-primary), 
+      var(--accent-color), 
+      var(--accent-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+
+
+  .gallery h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    align-items: center;
+    font-weight: normal;
   }
   
   .photo-gallery img {
@@ -238,11 +285,12 @@ header h1{
   
   .links {
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
   }
   
   .links a {
     color: var(--accent-color);
-    display: block;
     margin-bottom: 0.5rem;
     word-break: break-word;
     transition: color 0.3s ease;
