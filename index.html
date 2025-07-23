@@ -18,7 +18,7 @@
 <body>
   <header>
     <h1>FloSight Drone Services</h1>
-    <img src="assets/Our Media/logo-banner.jpg" alt="A photo of a Florida agricultural field with the FloSight logo">
+    <img src="assets/Our Media/logo-banner.jpg" loading="lazy" alt="A photo of a Florida agricultural field with the FloSight logo">
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
@@ -30,7 +30,10 @@
   <main>
     <section id="home" class="home">
       <h2 class="thermal-text">Welcome to FloSight Drone Services</h2>
-      <p>FloSight Drone Services is a veteran-owned business offering advanced aerial solutions for agricultural, residential, and industrial needs. Based in Central Florida, we are proud to bring high-quality, affordable drone technology to the communities we serve.</p>
+      <p>FloSight Drone Services is a veteran-owned business offering advanced aerial solutions for 
+        agricultural, residential, and industrial needs. Based in Central Florida, we are proud to bring
+        high-quality, affordable drone technology to the communities we serve. <br>
+        Our mission is to make professional drone services accessible to businesses and individuals who value <strong>excellence</strong>, <strong>efficiency</strong>, and <strong>trust</strong>. Whether you're a farmer, realtor, contractor, or homeowner: we're here to help.</p>
       <div class="video-container">
         <iframe 
         src="https://www.youtube.com/embed/TqidDwPXJW4?autoplay=1&mute=1&loop=1&playlist=TqidDwPXJW4&controls=1&modestbranding=1&rel=0"        frameborder="0"
@@ -49,6 +52,7 @@
   <div class="services-columns">
     <div class="services-section">
       <ul class="services-list">
+        <h3>Current Services</h3>
         <li><span class="material-symbols-outlined">drone</span> Aerial Photography & Videography</li>
         <p>
           Real estate marketing packages (photos, flyovers, lot outlines) <br>
@@ -76,7 +80,7 @@
 
     <div class="services-section">
       <ul class="services-list">
-        <h3>These services will be coming soon</h3>
+        <h3>Upcoming Services</h3>
         <li><span class="material-symbols-outlined">drone</span> Agricultural Prescriptions & Data Analytics</li>
         <p>
           Generation of prescription maps for variable rate application <br>
@@ -102,9 +106,6 @@
     </div>
   </div>
 </section>
-
-
-      <p>Our mission is to make professional drone services accessible to businesses and individuals who value <strong>excellence</strong>, <strong>efficiency</strong>, and <strong>trust</strong>. Whether you're a farmer, realtor, contractor, or homeowner: we're here to help.</p>
     </section>
 
     <hr>
@@ -112,14 +113,14 @@
     <section id="gallery" class="gallery">
       
         <h2><span id="gallery-focus">Gallery</span> Explore some of the images captured using our current fleet</h2>
-
+        <h3>DJI Air 3S</h3>
         <div class="photo-gallery">
-            <img src="assets\Our Media\one.JPG" alt="Image of hometown baseball field">
-            <img src="assets\Our Media\ResidentailLake.JPG" alt="Aerial drone capture">
-            <img src="assets\Our Media\Marsh.JPG" alt="Top down view of baseball field">
-            <img src="assets\Our Media\Residential.JPG" alt="Residential area">
-            <img src="assets\Our Media\BlueRoofs.JPG" alt="Residential area with blue roofs as the centerpiece">
-            <img src="assets/Our Media/BaseballField.JPG" alt="Image of a baseball field">
+            <img src="assets\Our Media\one.JPG" loading="lazy" alt="Image of hometown baseball field">
+            <img src="assets\Our Media\ResidentailLake.JPG" loading="lazy" alt="Aerial drone capture">
+            <img src="assets\Our Media\Marsh.JPG" loading="lazy" alt="Top down view of baseball field">
+            <img src="assets\Our Media\Residential.JPG" loading="lazy" alt="Residential area">
+            <img src="assets\Our Media\BlueRoofs.JPG" loading="lazy" alt="Residential area with blue roofs as the centerpiece">
+            <img src="assets/Our Media/BaseballField.JPG" loading="lazy" alt="Image of a baseball field">
             
             
         </div>
@@ -133,7 +134,7 @@
       <div id="form-section" class="form-section">
         <p>Fill out this form and someone will reach out for a consultation</p>
         <form id="serviceRequestForm">
-          <label for="fullName">Full Name:</label>
+          <label for="fullName">Contact Name:</label>
           <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
 
           <label for="email">Email:</label>
@@ -196,18 +197,31 @@
           <button type="submit">Submit Request</button>
         </form>
       </div>
-
-
-      <div class="links">
-        <p><a href="mailto:FlosightdronesLLC@gmail.com">FlosightdronesLLC@gmail.com</a></p>
-        <p><a href="assets/Data Use & Privacy Policy.pdf" target="_blank">Data Use & Privacy Policy</a></p>
-        <p><a href="https://www.vetstodrones.org/">VETS TO DRONES</a></p>
-      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 FloSight Drone Services. All rights reserved.</p>
+    <div class="links">
+        <p><a href="mailto:FlosightdronesLLC@gmail.com">FlosightdronesLLC@gmail.com</a></p>
+        <p><a href="assets\Privacy Policy 22Jul25.pdf" target="_blank">Data Use & Privacy Policy</a></p>
+        <p>
+          <img src="assets\Footer Icons\Vets-to-Drones-Logo.png" class="footer-icon">
+          <a href="https://www.vetstodrones.org/" target="_blank">VETS TO DRONES</a>
+        </p>
+        <p>
+          <img src="assets\Footer Icons\social_facebook_fb_35.png" class="footer-icon">
+          <a href="https://www.facebook.com/FLoSightDrones" target="_blank">Facebook</a>
+        </p>
+        <p>
+          <img src="assets\Footer Icons\social_youtube_23.png" class="footer-icon">
+          <a href="https://www.youtube.com/@FloSightDrones" target="_blank">YouTube</a>
+        </p>
+        <p>
+          <img src="assets\Footer Icons\social_instagram_3.png" class="footer-icon">
+          <a href="https://www.instagram.com/flosightdrones/" target="_blank">Instagram</a>
+        </p>
+      </div>
+    <p id="copy">&copy; 2025 FloSight Drone Services. All rights reserved.</p>
   </footer>
 
   <script src="script.js" async defer></script>

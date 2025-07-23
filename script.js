@@ -3,6 +3,7 @@ const supabaseUrl = 'https://asyqeocahphppyxnawkl.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFzeXFlb2NhaHBocHB5eG5hd2tsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMxNjEwNzIsImV4cCI6MjA2ODczNzA3Mn0.DxDjjxeN8029aXy-mAtfVegnDz2ln4ZkovHDyTtSFjM'; // replace with your actual anon key
 const supabaseClient = createClient(supabaseUrl, supabaseKey);
 
+//form submission handler
 
 const form = document.getElementById('serviceRequestForm');
 const formSection = document.getElementById('formSection');
@@ -25,7 +26,7 @@ form.addEventListener('submit', async (event) => {
   console.log('Submitting form data:', formData);
 
   const { data, error } = await supabaseClient
-    .from('FloSight Requests') 
+    .from('FloSightRequests') 
     .insert([formData]);
 
   console.log('Response:', { data, error });
@@ -38,3 +39,9 @@ form.addEventListener('submit', async (event) => {
     form.reset();
   }
 });
+
+//set the default value for the start date to today
+ document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('startDate').value = today;
+   });

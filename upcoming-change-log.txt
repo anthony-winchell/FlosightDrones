@@ -1,7 +1,7 @@
 see if you can connect database with quickbooks
 set up email alerts
-label the section of gallery for dji air 3s
 project type multi choice
-have project start date default to "today"
-Full Name: change to ' Contact name' 
 Add Business as an optional field
+link youtube video
+
+Add fleet section that outlines all drones and their capabilities
