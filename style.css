@@ -378,6 +378,10 @@ header h1{
   
 
   @media (max-width: 600px) {
+    #gallery-focus{
+      display: block;
+    }
+
     nav {
       flex-direction: column;
       gap: 0.5rem;
