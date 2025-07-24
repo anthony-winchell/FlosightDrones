@@ -352,6 +352,14 @@ header h1{
     height: 1px;
     background: #444;
   }
+
+  .verification-badges {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   
   footer {
     background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));

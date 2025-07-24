@@ -134,7 +134,7 @@
         <p>Fill out this form and someone will reach out for a consultation</p>
         <form id="serviceRequestForm" name="serviceRequestForm" action="https://formspree.io/f/mkgzjawv" method="POST"
           <label for="fullName">Contact Name:</label>
-          <input type="text" id="fullName" name="fullName" placeholder="Your Name" required>
+          <input type="text" id="fullName" name="fullName" placeholder="Contact Name" required>
         
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
@@ -161,6 +161,7 @@
             <label><input type="checkbox" name="projectType" value="Aerial Photography & Videography"> Aerial Photography & Videography</label>
             <label><input type="checkbox" name="projectType" value="FPV Scouting & Confined Space Video"> FPV Scouting & Confined Space Video</label>
             <label><input type="checkbox" name="projectType" value="Community Outreach & Support"> Community Outreach & Support</label>
+            <label><input type="checkbox" name="projectType" value="Other">Other (please specify in project desctiption)</label>
           </fieldset>
         
           <label for="description">Project Description:</label>
@@ -169,14 +170,14 @@
           <label for="location">Approximate Service Address or Location:</label>
           <input type="text" id="location" name="location" placeholder="Eustis, FL">
         
-          <label for="contactTime">Preferred Time to Contact:</label>
-          <select id="contactTime" name="contactTime" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="Anytime">Anytime</option>
-            <option value="Morning">Morning</option>
-            <option value="Afternoon">Afternoon</option>
-            <option value="Evening">Evening</option>
-          </select>
+           <fieldset>
+            <legend>Preferred Contact Time:</legend>
+            <label><input type="checkbox" name="contactTime" value="Morning">Morning</label>
+            <label><input type="checkbox" name="contactTime" value="Afternoon">Afternoon</label>
+            <label><input type="checkbox" name="contactTime" value="Evening">Evening</label>
+            <label><input type="checkbox" name="contactTime" value="Anytime">Anytime</label>
+          </fieldset>
+        
         
           <label for="budget">Estimated Budget (optional):</label>
           <input type="text" id="budget" name="budget" placeholder="$3,000">
@@ -186,6 +187,11 @@
         
       </div>
     </section>
+    <div class="verification-badges">
+      <a href='https://certificates.airdata.com/eIQEQq'><img alt='Airdata UAV|Drone Safety Verified Badge' src='https://certificates.airdata.com/badge?i=eIQEQq&r=bXkK&t=6&m=1&size=11&c=0'
+        style='width:379px;height:100px;border:0;image-rendering: optimizequality;image-rendering: smooth;'>
+      </a>
+    </div>  
   </main>
 
   <footer>

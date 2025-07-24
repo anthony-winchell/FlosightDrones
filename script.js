@@ -17,6 +17,10 @@ form.addEventListener('submit', async (event) => {
     form.querySelectorAll('input[name="projectType"]:checked')
   ).map(cb => cb.value).join(', ');
 
+  const contactTimeValues = Array.from(
+    form.querySelectorAll('input[name="contactTime"]:checked')
+  ).map(cb => cb.value).join(', ');
+
   const formData = {
     fullName: form.fullName.value,
     email: form.email.value,
@@ -26,7 +30,7 @@ form.addEventListener('submit', async (event) => {
     projectType: projectTypeValues,
     description: form.description.value,
     location: form.location.value,
-    contactTime: form.contactTime.value,
+    contactTime: contactTimeValues,
     budget: form.budget.value,
   };
 
@@ -63,7 +67,7 @@ form.addEventListener('submit', async (event) => {
         projectType: projectTypeValues,
         description: form.description.value,
         location: form.location.value,
-        contactTime: form.contactTime.value,
+        contactTime: contactTimeValues,
         budget: form.budget.value,
         _from: "no-reply@flosightdrones.com",
       }),
