@@ -10,13 +10,17 @@ const formSection = document.getElementById('formSection');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
+  const projectTypeValues = Array.from(
+    form.querySelectorAll('input[name="projectType"]:checked')
+  ).map(checkbox => checkbox.value).join(', ');
+
   const formData = {
     fullName: form.fullName.value,
     email: form.email.value,
     phone: form.phone.value,
     contactMethod: form.contactMethod.value,
     startDate: form.startDate.value,
-    projectType: form.projectType.value,
+    projectType: projectTypeValues, 
     description: form.description.value,
     location: form.location.value,
     contactTime: form.contactTime.value,
@@ -26,7 +30,7 @@ form.addEventListener('submit', async (event) => {
   console.log('Submitting form data:', formData);
 
   const { data, error } = await supabaseClient
-    .from('FloSightRequests') 
+    .from('FloSightRequests')
     .insert([formData]);
 
   console.log('Response:', { data, error });
