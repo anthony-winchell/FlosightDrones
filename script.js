@@ -1,6 +1,44 @@
 const backendUrl = 'https://flosightdronesbackend.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // format the phone number input
+  const phoneInput = document.getElementById("phone");
+
+  phoneInput.addEventListener("input", function (e) {
+    let numbers = this.value.replace(/\D/g, "");
+
+    if (numbers.length > 10) {
+      numbers = numbers.slice(0, 10);
+    }
+
+    let formatted = numbers;
+
+    if (numbers.length > 6) {
+      formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(6)}`;
+    } else if (numbers.length > 3) {
+      formatted = `(${numbers.slice(0, 3)}) ${numbers.slice(3)}`;
+    } else if (numbers.length > 0) {
+      formatted = `(${numbers}`;
+    }
+
+    this.value = formatted;
+  });
+  // formatt budget input
+  const budgetInput = document.getElementById("budget");
+
+  budgetInput.addEventListener("input", function (e) {
+    let raw = this.value.replace(/[^\d]/g, ""); 
+    if (raw === "") {
+      this.value = "";
+      return;
+    }
+
+    let number = parseInt(raw, 10);
+    this.value = `$${number.toLocaleString()}`;
+  });
+
+
+  // handle form submission
   const form = document.getElementById('serviceRequestForm');
 
   form.addEventListener('submit', async (event) => {
