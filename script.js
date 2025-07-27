@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     this.value = formatted;
   });
-  // formatt budget input
+  // format budget input
   const budgetInput = document.getElementById("budget");
 
   budgetInput.addEventListener("input", function (e) {
