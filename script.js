@@ -4,13 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // format the phone number input
   const phoneInput = document.getElementById("phone");
 
-  phoneInput.addEventListener("input", function (e) {
-    let numbers = this.value.replace(/\D/g, "");
-
-    if (numbers.length > 10) {
-      numbers = numbers.slice(0, 10);
-    }
-
+  phoneInput.addEventListener("input", function () {
+    let numbers = this.value.replace(/\D/g, "").slice(0, 10);
     let formatted = numbers;
 
     if (numbers.length > 6) {
@@ -23,24 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     this.value = formatted;
   });
+
   // format budget input
   const budgetInput = document.getElementById("budget");
-
-  budgetInput.addEventListener("input", function (e) {
-    let raw = this.value.replace(/[^\d]/g, ""); 
+  budgetInput.addEventListener("input", function () {
+    const raw = this.value.replace(/[^\d]/g, "");
     if (raw === "") {
       this.value = "";
       return;
     }
-
-    let number = parseInt(raw, 10);
-    this.value = `$${number.toLocaleString()}`;
+    this.value = `$${parseInt(raw, 10).toLocaleString()}`;
   });
-
 
   // handle form submission
   const form = document.getElementById('serviceRequestForm');
-
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -53,27 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
     ).map(cb => cb.value);
 
     const formData = {
-      fullName: form.fullName.value,
-      email: form.email.value,
-      phone: form.phone.value,
-      contactMethod: form.contactMethod.value,
-      startDate: form.startDate.value,
-      projectType: projectTypeValues,
-      description: form.description.value,
-      location: form.location.value,
-      contactTime: contactTimeValues,
-      budget: form.budget.value,
+      fullName: form.fullName.value || "",
+      email: form.email.value || "",
+      phone: form.phone.value || "",
+      contactMethod: form.contactMethod.value || "",
+      startDate: form.startDate.value || null,
+      projectType: projectTypeValues.length ? projectTypeValues : null,
+      description: form.description.value || "",
+      location: form.location.value || "",
+      contactTime: contactTimeValues.length ? contactTimeValues : null,
+      budget: form.budget.value || ""
     };
 
     try {
-      const res = await fetch('https://flosightdronesbackend.onrender.com/submit-form', {
+      const res = await fetch(`${backendUrl}/submit-form`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-      if (!res.ok) throw new Error('Submission failed');
+      if (!res.ok) {
+        const errText = await res.text();
+        throw new Error(`Submission failed: ${errText}`);
+      }
 
+      // success message
       form.style.opacity = '0';
       setTimeout(() => {
         form.innerHTML = `
@@ -86,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     } catch (error) {
       alert('There was a problem submitting the form. Please try again.');
-      console.error(error);
+      console.error('Form submission error:', error);
     }
   });
 });
