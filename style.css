@@ -220,7 +220,22 @@ header h1{
     object-fit: cover;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
 
+  .luma-container{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+  }
+
+  iframe{
+    width: 92%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
   }
 
   .photo-gallery img:hover {
