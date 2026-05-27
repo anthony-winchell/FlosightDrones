@@ -1,2 +1,0 @@
-see if you can connect database with quickbooks
-Add Business as an optional field
